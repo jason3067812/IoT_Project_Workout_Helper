@@ -2,4 +2,4 @@
 
 ## IOT final project
 
-### Skills: micropython, AWS EC2, Flask, MongoDB
+### Tools: micropython, AWS EC2, Flask, MongoDB
