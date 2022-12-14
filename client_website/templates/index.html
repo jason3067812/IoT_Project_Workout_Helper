@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>
+          Workout Helper
+      </title>
+      <link rel="stylesheet" href="../templates/index.css">
+   </head>
+   <body>
+        <form name="chart_data">
+            <input type=hidden id="numberB" name="numberB" value={{numberB}}/>
+            <input type=hidden id="numberS" name="numberS" value={{numberS}}/>
+            {% for n in range(dates |length) %}
+            <input type=hidden id="dates" name="dates" value={{dates[n]}}/>
+            <input type=hidden id="exercises" name="exercises" value={{exercises[n]}}/>
+            <input type=hidden id="numberReps" name="numberReps" value={{numberReps[n]}}/>
+            <input type=hidden id="numberSets" name="numberSets" value={{numberSets[n]}}/>
+            <input type=hidden id="repsPerSet" name="repsPerSet" value={{repsPerSet[n]}}/>
+            {% endfor %}
+        </form>
+        <div id="but">
+            <button id="input_button" onclick="location.href='/input'">INPUT YOUR INFO</button>
+        </div>
+        <div id="filter">
+            <form method="POST">
+                <label for="Exercise">Exercise:</label>
+                <select id="Exercise" name="Exercise">
+                    <option value="bench press">bench press</option>
+                    <option value="squat">squat</option>
+                </select>
+                <label for="start">Start date:</label>
+                <input type="date" id="start" name="start"
+                    value="2022-01-01"
+                    min="2022-01-01" max="2022-12-31">
+                <label for="end">End date:</label>
+                <input type="date" id="end" name="end"
+                    value="2022-12-31"
+                    min="2022-01-01" max="2022-12-31">
+                <input type="submit" id="submit" name="submit" value="submit"></input>
+            </form>
+        </div>
+        {% if filter %}
+        <div class="parent">
+            <div id="result_type">
+                Showing the results for **{{filter}}** from {{start}} to {{end}}
+            </div>
+            
+            <div id="chart">
+                <canvas id="myChart"></canvas>
+            </div>
+            <div id="charts">
+                <div id="piechart">
+                    <canvas id="pie_chart"></canvas>
+                </div>
+                <div>
+                    <canvas id="line_chart"></canvas>
+                </div>
+            </div>
+        </div>
+        {% else %}
+
+        <div id="progreses">
+            <div class="pro_parent">
+                <div>
+                    <label for="file">{{ s_count}}/50 Squat:</label>
+                    <progress id="file" value="{{ s_count * 2 }}" max="100"></progress>
+                </div>
+                <div>
+                    {% if s_count * 2 >= 100 %}
+                    <img src="../image/muscle1.png">
+                    {% else %}
+                    <img src="../image/muscle1_g.png">
+                    {% endif %}
+                </div>
+            </div>   
+            <div class="pro_parent">
+                <div>
+                    <label for="file">{{ b_count}}/50 Bench Press:</label>
+                    <progress id="file" value="{{ b_count * 2 }}" max="100"></progress>
+                </div>
+                <div>
+                    {% if b_count * 2 >= 100 %}
+                    <img src="../image/muscle1.png">
+                    {% else %}
+                    <img src="../image/muscle1_g.png">
+                    {% endif %}
+                </div>
+            </div>     
+            <div class="pro_parent">
+                <div>
+                    <label for="file">{{ s_count}}/500 Squat:</label>
+                    <progress id="file" value="{{ s_count * 0.2 }}" max="100"></progress>
+                </div>
+                <div>
+                    {% if s_count * 0.2 >= 100 %}
+                    <img src="../image/muscle1.png">
+                    {% else %}
+                    <img src="../image/muscle1_g.png">
+                    {% endif %}
+                </div>
+            </div>   
+            <div class="pro_parent">
+                <div>
+                    <label for="file">{{ b_count}}/500 Bench Press:</label>
+                    <progress id="file" value="{{ b_count * 0.2 }}" max="100"></progress>
+                </div>
+                <div>
+                    {% if b_count * 0.2>=100 %}
+                    <img src="../image/muscle1.png">
+                    {% else %}
+                    <img src="../image/muscle1_g.png">
+                    {% endif %}
+                </div>
+            </div>
+            <div class="pro_parent">
+                <div>
+                    <label for="file">{{ s_count}}/1000 Squat:</label>
+                    <progress id="file" value="{{ s_count * 0.1 }}" max="100"></progress>
+                </div>
+                <div>
+                    {% if s_count * 0.2 >= 100 %}
+                    <img src="../image/muscle1.png">
+                    {% else %}
+                    <img src="../image/muscle1_g.png">
+                    {% endif %}
+                </div>
+            </div>
+            <div class="pro_parent">
+                <div>
+                    <label for="file">{{ b_count}}/1000 Bench Press:</label>
+                    <progress id="file" value="{{ b_count * 0.1 }}" max="100"></progress>
+                </div>
+                <div>
+                    {% if b_count * 0.2 >=100 %}
+                    <img src="../image/muscle1.png">
+                    {% else %}
+                    <img src="../image/muscle1_g.png">
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+   </body>
+
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <script src="../templates/index.js"></script>
+</html>

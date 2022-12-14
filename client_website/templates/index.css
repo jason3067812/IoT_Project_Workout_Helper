@@ -1,0 +1,105 @@
+#input_button{
+    -webkit-box-shadow: 0 0 10px rgb(207, 204, 204);
+    box-shadow: 0 0 10px rgb(207, 204, 204);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+    font-size: 20px;
+}
+#but{
+    width:300px;
+    margin-left: auto;
+    margin-right:auto;
+}
+.parent{
+    border-style: none;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 10px rgb(207, 204, 204);
+    box-shadow: 0 0 10px rgb(207, 204, 204);
+    padding: 20px;
+}
+#result_type{
+    text-align: center;
+    font-size: 30px;
+    -webkit-box-shadow: 0 0 10px rgb(207, 204, 204);
+    box-shadow: 0 0 10px rgb(207, 204, 204);
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+#charts{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 20px;
+}
+#filter{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0 0 10px rgb(207, 204, 204);
+    box-shadow: 0 0 10px rgb(207, 204, 204);
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    width: 80vw;
+    background-color: white;
+    margin-left: auto;
+    margin-right:auto;
+}
+#filter input,select{
+    font-size: 20px;
+}
+
+canvas{
+    max-height: 40vh;
+}
+#progreses{
+    width: 90vw;
+    -webkit-box-shadow: 0 0 10px rgb(207, 204, 204);
+    box-shadow: 0 0 10px rgb(207, 204, 204);
+    margin-left: auto;
+    margin-right:auto;
+    font-family: cursive;
+    font-size: 30px;
+    background: url(../image/gym.jpg);
+    height: 80vh; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+    color: white;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+body{
+    background-color: #efefef;
+}
+#progreses progress{
+    width: 100%;
+    height: 30px;
+}
+.pro_parent{
+    display: grid;
+    grid-template-columns: 8fr 1fr;
+    grid-gap: 10px;
+    margin-bottom: 50px;
+    align-items: center;
+}
+.pro_parent img{
+    width: 100%;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(201, 196, 196);
+    border-radius: 10px;
+}
+.pro_parent img{
+    border-radius: 50%;
+}

@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>
+          User Input
+      </title>
+   </head>
+   <body>
+      <div id="main">
+         <form method="POST">
+            <input type="text" id="height" name="height" placeholder="height (cm)"></input><br>
+            <input type="text" id="lengthofarm" name="lengthofarm" placeholder="length of arm (cm)"></input><br>
+            <input type="text" id="lengthofleg" name="lengthofleg" placeholder="length of leg (cm)"></input><br>
+            <input type="submit" id="submit" name="submit" value="submit"></input>
+        </form>
+        <button id="back" onclick="location.href='/'">back</button>
+      </div>
+      <div id="current">
+         <div class="children" style="background-color:#f3f7ba">
+            Height: {{height}}cm
+         </div>
+         <div class="children" style="background-color:#FFB1C1">
+            Arm Length: {{lengthofarm}}cm
+         </div>
+         <div class="children" style="background-color:#c5e0f0">
+            Leg Length: {{lengthofleg}}cm
+         </div>
+      </div>
+      <hr>
+      <footer style="text-align:center">
+          <small>**We use these values to give feedback on the quality of your workout**</small>
+      </footer>
+   </body>
+   <style>
+      #submit{
+         border-radius: 5px;
+         background-color: rgb(96, 214, 96);
+         border-style: none;
+         padding: 5px;
+         color: white;
+         font-size: 30px;
+      }
+      #submit:hover{
+         background-color: rgb(88, 196, 88);
+      }
+      #back{
+         border-radius: 5px;
+         background-color: rgb(35, 98, 235);
+         border-style: none;
+         padding: 5px;
+         color: white;
+         font-size: 20px;
+      }
+      #back:hover{
+         background-color:rgb(35, 89, 206);
+      }
+      body{
+         background-color: #efefef;
+      }
+      input{
+         margin-bottom: 20px;
+         font-size: 30px;
+      }
+      #main{
+         background-color: white;
+         width: 30vw;
+         -webkit-box-shadow: 0 0 10px rgb(207, 204, 204);
+         box-shadow: 0 0 10px rgb(207, 204, 204);
+         text-align: center;
+         padding: 20px;
+         margin-left: auto;
+         margin-right: auto;
+         margin-top: 50px;
+         border-radius: 10px;
+      }
+      #current{
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+         grid-gap: 10px;
+         text-align: center;
+         margin-top: 30px;
+         font-size: 30px;
+      }
+      .children{
+         color: rgb(133, 133, 133);
+         width: 80%;
+         background-color: white;
+         border-radius: 10px;
+         padding: 10px;
+         -webkit-box-shadow: 0 0 10px rgb(207, 204, 204);
+         box-shadow: 0 0 10px rgb(207, 204, 204);
+         margin-left: auto;
+         margin-right: auto;
+      }
+   </style>
+</html>
