@@ -1,0 +1,80 @@
+#main-t{
+    background: url(https://www.textures4photoshop.com/tex/thumbs/lava-magma-seamless-texture-free-download-70.jpg) no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip:text;
+    background-clip:text; 
+    padding:0;
+    margin:0;
+    text-align:center;
+    -webkit-text-stroke: 3px #ffaa00;
+}
+#motivation img{
+    width: 80%;
+    border-radius: 10px;
+}
+#motivation p{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+}
+#single-block{
+    background-image: linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% );
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0 0 10px rgb(207, 204, 204);
+    box-shadow: 0 0 10px rgb(90, 88, 88);
+}
+#prototype_img{
+    -webkit-box-shadow: 0 0 10px rgb(207, 204, 204);
+    box-shadow: 0 0 10px rgb(90, 88, 88);
+    margin-top: 20px;
+}
+#single-motivation small{
+    font-size: 15px;
+}
+#motivation-parent{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+}
+#system p{
+    text-align: left;
+}
+#system img{
+    width: 80%;
+}
+#top p{
+    font-size: 30px;
+    font-weight: bold;
+}
+#main-title{
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-gap:10px;
+}
+#main-title img{
+    width: 80%;
+}
+#right-barbell{
+    scale: 1 -1;
+}
+#main-title p{
+    font-family: groovy;
+    font-weight: normal;
+}
+#top ul{
+    font-family: groovy;
+    font-weight: normal;
+}
+#right-rocket{
+    scale: -1 1;
+}
